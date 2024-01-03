@@ -11,6 +11,7 @@
         height: 360px;
         width : 100%;
         object-fit:cover;
+        margin-bottom:16px;
         
         
       }
@@ -19,15 +20,24 @@
     
   </head>
   <body>
-    <div class ="container">
-    <h1 class="text-center">{{company_name}} Jobs</h1>
+    {% include 'nav.html'%}
     <img class ="img-fluid"id="banner"src ="https://fresher-careers-website.aditisapate.repl.co/static/baner.jpg" >
+    <div class ="container">
+    
     <h2 class="text-center mt-2 mb-4">About Fresher Jobs</h2>
+      <div class ="row">
+        <div class ="col-md-6">
+
     <p class="lead">
       Fresher Career Site is a dedicated online platform tailored to meet the unique needs of individuals embarking on their professional journey. This specialized website serves as a comprehensive resource for recent graduates and entry-level job seekers, offering a curated selection of job opportunities, internships, and career guidance. The platform strives to bridge the gap between fresh talent and prospective employers by providing user-friendly interfaces, insightful articles, and networking opportunities. Fresher Career Site understands the challenges faced by newcomers to the workforce and aims to empower them with the tools and information necessary to kickstart a successful career. With a focus on simplicity and relevance, this site becomes an invaluable ally for those navigating the exciting but often challenging transition from academia to the professional world.
 
       
     </p>
+        </div>
+        <div class ="d-none d-md-block col-md-6">
+        <img src ="/static/people_working.jpg" style = "height:340px" border-radius:4px;>
+        </div>
+      </div>
     <h2 class="text-center mt-2 mb-4">Open Position</h2>
    <div>
      {% for job in jobs %}
@@ -35,9 +45,10 @@
      {% endfor %}
    </div>
     <div class="text-center" >
-    <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2022,Fresher Jobs</p>
-        </div>
+    <a href ="mailto:hello@fresher.ai?subject=Questions%20about%20Job%20openings&body=My%20name%20%3D%20%3Cyour%20name%3E%0D%0AMy%20question%20%3A%3Center%20question%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
+
+    </div>
+      {%include 'footer.html'%}
       </div>
   </body>
 </html>
