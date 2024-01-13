@@ -21,7 +21,7 @@
   </head>
   <body>
     {% include 'nav.html'%}
-    <img class ="img-fluid"id="banner"src ="https://fresher-careers-website.aditisapate.repl.co/static/baner.jpg" >
+    <img class ="img-fluid"id="banner"src ="{{ url_for('static', filename='baner.jpg') }}" alt="Header Image" >
     <div class ="container">
     
     <h2 class="text-center mt-2 mb-4">About Fresher Jobs</h2>
